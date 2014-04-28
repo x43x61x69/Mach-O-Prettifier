@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mach-O Prettifier by x43x61x69</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mach-O Prettifier</h1>
+        <p>A Mach-O Load Command deobfuscator.</p>
+
+        <p class="view"><a href="https://github.com/x43x61x69/Mach-O-Prettifier">View the Project on GitHub <small>x43x61x69/Mach-O-Prettifier</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/x43x61x69/Mach-O-Prettifier/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/x43x61x69/Mach-O-Prettifier/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/x43x61x69/Mach-O-Prettifier">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><img src="https://dl.dropboxusercontent.com/s/udr3rh3lcsouvzh/Mach-OPrettifier.png" alt="Screenshot"></p>
+
+<hr><h2>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h2>
+
+<p><em>The source code served as an example, it is, by no means, a commercial 
+grade product. It might contain errors or flaws, and it was created for 
+demonstration purpose only.</em></p>
+
+<p>Apple allows it's binary to run with incorrect load command names in the 
+header, which is a great thing to prevent unnecessary error for the end 
+users. However, this will break most of the debugging tools currently 
+available on OS X. (IDA Pro, Hopper, gdb...etc.) Some malware might use this 
+an anti-debugging trick. This tool will analyze the load command structures 
+and try to restore it's original names so it can be debugged.</p>
+
+<p>The following architectures are supported by Mach-O Prettifier:</p>
+
+<ul>
+<li>i386</li>
+<li>x86_64</li>
+<li>Fat (i386 + x86_64)</li>
+</ul><p><em>PowerPC (PPC) is not support by this tool.</em></p>
+
+<p>To compile:</p>
+
+<p><code>clang mpfr.c -O2 -o mpfr</code></p>
+
+<hr><h2>
+<a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h2>
+
+<p>v0.1:</p>
+
+<ul>
+<li>Initial release.</li>
+</ul><hr><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright (C) 2014  Cai, Zhi-Wei.</p>
+
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/x43x61x69">x43x61x69</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-49707923-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
